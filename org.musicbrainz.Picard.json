@@ -151,6 +151,7 @@
         },
         "files/rsgain.json",
         "files/python3-deps.json",
+        "files/python3-plugin-deps.json",
         {
             "name": "picard",
             "buildsystem": "simple",
