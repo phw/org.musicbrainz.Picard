@@ -151,7 +151,6 @@
         },
         "files/rsgain.json",
         "files/python3-deps.json",
-        "files/python3-aubio.json",
         {
             "name": "picard",
             "buildsystem": "simple",
