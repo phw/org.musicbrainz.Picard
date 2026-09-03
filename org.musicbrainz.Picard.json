@@ -1,7 +1,7 @@
 {
     "id": "org.musicbrainz.Picard",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-25.08",
+    "runtime-version": "6.11",
     "sdk": "org.kde.Sdk",
     "command": "picard",
     "finish-args": [
@@ -31,11 +31,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/0d/9d/5179b8e619fe084218a87f963f1648cba4c5aa5bb98dd5661d2cbb9eb1e4/pyqt5_sip-12.19.0.tar.gz",
-                    "sha256": "71cacf1879da2cd3e50cb239e21673cfe02d358af70ab6768817c960428868c3",
+                    "url": "https://files.pythonhosted.org/packages/d1/23/16c583dbb6b53e0494dfcf7d1a44778c82e324edda62326727b37f1a5b34/pyqt6_sip-13.12.0.tar.gz",
+                    "sha256": "a7ad45c1e3cec3a2473d37ea9870b6c3baeccc560298623c8eb59265714c06e2",
                     "x-checker-data": {
                         "type": "pypi",
-                        "name": "pyqt5-sip"
+                        "name": "pyqt6-sip"
                     }
                 }
             ]
@@ -70,11 +70,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz",
-                    "sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52",
+                    "url": "https://files.pythonhosted.org/packages/8b/47/b25c13eca5bebc6505394d0223e46d7ebf0c57dcac2ed908d7d19b18ab6b/pyqt6-6.11.0.tar.gz",
+                    "sha256": "45dd60aa69976de1918b5ced6b4e7b6a25abd2a919ecef5fd5826ecc76718889",
                     "x-checker-data": {
                         "type": "pypi",
-                        "name": "pyqt5"
+                        "name": "pyqt6"
                     }
                 },
                 {
@@ -216,18 +216,18 @@
             "name": "picard",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --compile --config-settings=\"--global-option=build --disable-autoupdate --localedir=${FLATPAK_DEST}/share/locale\" --no-build-isolation --prefix=${FLATPAK_DEST} --verbose ."
+                "pip3 install --compile --config-settings=\"--global-option=build --disable-autoupdate\" --no-build-isolation --prefix=${FLATPAK_DEST} --verbose ."
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/metabrainz/picard.git",
-                    "tag": "release-2.13.3",
-                    "commit": "8a062c9a7c103e1abed485e62f75bdc332753311",
+                    "type": "archive",
+                    "url": "https://github.com/metabrainz/picard/releases/download/release-3.0.0rc1/picard-3.0.0rc1.tar.gz",
+                    "sha256": "3b9dd717a5f012c4d2f0083045f195f928e0610aa65a313a590006c31a2055d8",
                     "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^release-([\\d.]+)$",
-                        "is-main-source": true
+                        "type": "anitya",
+                        "project-id": 3633,
+                        "stable-only": true,
+                        "url-template": "https://github.com/metabrainz/picard/releases/download/release-$version/picard-$version.tar.gz"
                     }
                 }
             ]
