@@ -161,8 +161,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/metabrainz/picard/releases/download/release-3.0.0rc1/picard-3.0.0rc1.tar.gz",
-                    "sha256": "3b9dd717a5f012c4d2f0083045f195f928e0610aa65a313a590006c31a2055d8",
+                    "url": "https://github.com/metabrainz/picard/releases/download/release-3.0.0rc2/picard-3.0.0rc2.tar.gz",
+                    "sha256": "095c03e410fd9c66fcf548f160b102332650c4b564281977a1e64f787aa04da6",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 3633,
